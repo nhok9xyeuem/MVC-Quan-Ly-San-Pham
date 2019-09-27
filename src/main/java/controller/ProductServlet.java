@@ -54,11 +54,6 @@ public class ProductServlet extends HttpServlet {
 //            e.printStackTrace();
 //        }
 
-
-
-
-    }
-
     private void showDeleteFrom(HttpServletRequest req, HttpServletResponse resp) {
         int id = Integer.parseInt(req.getParameter("id"));
         Product product = this.product.findById(id);
