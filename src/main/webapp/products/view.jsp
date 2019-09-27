@@ -8,9 +8,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>View Product</title>
 </head>
 <body>
-$END$
+<h1> Product details</h1>
+<p>
+    <a href="/products">Back to Product list</a>
+</p>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>${requestScope["products"].getId()}</td>
+    </tr>
+    <tr>
+        <td>Ten San Pham</td>
+        <td>${requestScope["products"].getTensanpham()}</td>
+    </tr>
+    <tr>
+        <td>Gia San Pham </td>
+        <td>${requestScope["products"].getGiasanpham()}</td>
+    </tr>
+    <tr>
+        <td>Mo Ta San Pham</td>
+        <td>${requestScope["products"].getMotasanpham()}</td>
+    </tr>
+    <tr>
+        <td>Nha San Xuat</td>
+        <td>${requestScope["products"].getNhasanxuat()}</td>
+    </tr>
+</table>
 </body>
 </html>

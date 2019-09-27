@@ -19,30 +19,30 @@
 <p>
     <a href="/products">Back to Product List</a>
 </p>
-<form method="post">
+<form method="post" action="">
     <fieldset>
         <legend>Product List</legend>
 
         <table>
             <tr>
                 <td>ID</td>
-                <td><input type="number" name="id" value="id" hidden></td>
+                <td><input type="number" name="id" placeholder="id" ></td>
             </tr>
             <tr>
                 <td>Ten San Pham</td>
-                <td><input type="text" name="tensanpham" value="tensanpham"></td>
+                <td><input type="text" name="tensanpham" placeholder="tensanpham"></td>
             </tr>
             <tr>
                 <td>Gia San Pham </td>
-                <td><input type="number" name="giasanpham" value="giasanpham"></td>
+                <td><input type="number" name="giasanpham" placeholder="0"></td>
             </tr>
             <tr>
                 <td>Mo Ta San Pham</td>
-                <td><input type="text" name="motasanphan" value="motasanpham"></td>
+                <td><input type="text" name="motasanpham" placeholder="motasanpham"></td>
             </tr>
             <tr>
                 <td>Nha San Xuat</td>
-                <td><input type="text" name="nhasanxuat" value="nhasanxuat"></td>
+                <td><input type="text" name="nhasanxuat" placeholder="nhasanxuat"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Create Product"></td>

@@ -4,5 +4,13 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
+    <servlet>
+        <servlet-name>Product</servlet-name>
+        <servlet-class>controller.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Product</servlet-name>
+        <url-pattern>/products</url-pattern>
+    </servlet-mapping>
 
 </web-app>

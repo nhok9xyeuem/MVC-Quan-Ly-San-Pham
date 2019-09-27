@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<H1> Not Update</H1>
 </body>
 </html>

@@ -2,9 +2,10 @@
 <title> Product List</title>
 <h1>Product List</h1>
 <p>
-    <a href="products?action=create">Create new Product</a>
-
+    <a href="products?action=create">Create new Product</a><hr>
+<input type="text" name="search" value="Search" >
 </p>
+
 <table border="1">
     <tr>
         <td>Id</td>
@@ -15,14 +16,15 @@
         <td>Edit</td>
         <td>Delete</td>
     </tr>
-    <c:forEach items="${requestScope['products']}" var="product">
+    <c:forEach items='${requestScope["products"]}' var="product">
         <tr>
-            <td><a href="products?action=view$id=${product.getId()}">${product.getTensanpham()}</a></td>
-            <td>${product.getGiasanpham()}</td>
-            <td>${product.getMotasanpham()}</td>
-            <td>${product.getHangsanxuat()}</td>
-            <td><a href="products?action=edit$id=${product.getId()}">Edit</a></td>
-            <td><a href="products?action=delete$id=${product.getId()}">Delete</a></td>
+            <td><a href="products?action=view&id=${product.id}"> ${product.id} </a></td>
+            <td>${product.tensanpham}</td>
+            <td>${product.giasanpham}</td>
+            <td>${product.motasanpham}</td>
+            <td>${product.nhasanxuat}</td>
+            <td><a href="products?action=edit&id=${product.id}">Edit</a></td>
+            <td><a href="products?action=delete&id=${product.id}">Delete</a></td>
 
         </tr>
     </c:forEach>
