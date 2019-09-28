@@ -39,20 +39,19 @@ public class ProductServlet extends HttpServlet {
                 break;
         }
     }
-//    private void searchProduct(HttpServletRequest req, HttpServletResponse resp) {
-//        String search = req.getParameter("search");
-//        RequestDispatcher dispatcher;
-//        if (product.equals(search)){
-//            req.setAttribute("products", product);
-//            dispatcher=req.getRequestDispatcher("products/view.jsp");
-//        }else {
-//            dispatcher = req.getRequestDispatcher("products/error-404.jsp");
-//        }
-//        try {
-//            dispatcher.forward(req,resp);
-//        } catch (ServletException | IOException e) {
-//            e.printStackTrace();
-//        }
+    private void search(HttpServletRequest req, HttpServletResponse resp) {
+        String search = req.getParameter("search");
+        List<Product> products = product.search(search);
+        req.setAttribute("products",products);
+        RequestDispatcher dispatcher;
+        dispatcher = req.getRequestDispatcher("products/search.jsp");
+        try {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     private void showDeleteFrom(HttpServletRequest req, HttpServletResponse resp) {
         int id = Integer.parseInt(req.getParameter("id"));
@@ -149,6 +148,7 @@ public class ProductServlet extends HttpServlet {
             default:
                 break;
         }
+        search(req,resp);
 
     }
 

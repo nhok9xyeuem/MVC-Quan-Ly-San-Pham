@@ -1,8 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <title> Product List</title>
-<h1>Product List</h1>
+<h1>Search List</h1>
 <p>
-    <a href="products?action=create">Create new Product</a><hr>
+    <a href="/products">Back to Products list</a>
+</p>
+<p>
 <form method="post">
     <input type="text" name="search" value="Search" >
 </form>

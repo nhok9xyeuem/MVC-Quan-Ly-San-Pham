@@ -47,6 +47,17 @@ public class ProductServiceImpl implements ProductService {
         products.put(id, product);
 
     }
-
-
+@Override
+    public List<Product> search(String tensanpham) {
+        List<Product> arrayList = new ArrayList<>();
+        if(tensanpham.trim().isEmpty()){
+            throw new RuntimeException("not empty");
+        }
+        for (Product i : products.values()) {
+            if (i.getTensanpham().toLowerCase().contains(tensanpham.trim().toLowerCase())) {
+                arrayList.add(i);
+            }
+        }
+        return arrayList;
+    }
 }
